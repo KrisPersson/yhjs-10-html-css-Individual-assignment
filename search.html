@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonz.ai - En AI-driven eko vistelse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf6a502775.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <i class="hamburger-icon">
+                <hr>
+                <hr>
+                <hr>
+            </i>
+        </header>
+
+        <nav>
+        <input class="checkbox" type="checkbox">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About the hotel</a></li>
+                <li><a href="#" class="a--current">Find a room</a></li>
+                
+            </ul>
+            <div class="nav__background--about">
+                
+            </div>
+                
+            
+            
+        </nav>
+        <main>
+            <h1>Find a room</h1>
+            <form class="search__form" action="#">
+                <label for="start">
+                    Check-in date
+                    <input type="date" id="start" name="trip-start"
+                    value="2022-10-01"
+                    min="2022-10-01" max="2023-12-31">
+                </label>
+                
+                <label for="end">
+                    Check-out date
+                    <input type="date" id="end" name="trip-end"
+                    value="2022-10-02"
+                    min="2022-10-02" max="2023-12-31">
+                </label>
+                <label for="guests">
+                    Guests
+                    <select id=“guests” name=“guests” required>
+                        <option disabled selected value>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </label>
+                <button class="search-button">Search</button>
+            </form>
+            <section class="search-results">
+                <ul>
+                    <li><article class="search-result">
+                            <section class="search-result__images">
+                                <img src="img/photos/01-day.jpg" alt="Room daylight">
+                                <!-- <img src="img/photos/01-night.jpg" alt="Room night"> -->
+                            </section>
+                            <section class="search-result__info">
+                                <h3>Premium Sky</h3>
+                                <p>Premium room with a spectacular view, 60kvm</p>
+                            </section>
+                        
+                    </article></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(11, 11, 45);
+    font-family: Inter, sans-serif;
+}
+
+.wrapper {
+    max-width: 1000px;
+    min-height: 100%;
+    /* background: red; */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 6.25rem 10rem 1fr 3.25rem;
+    position: relative;
+}
+
+/* BLOCKS */
+
+header {
+    background-image: url(../img/logo/bonz.ai-logo-color-landscape.png);
+    background-repeat: no-repeat;
+    background-size: clamp(150px, 50%, 200px);
+    background-position: 0.8rem 1.6rem;
+    background-color: rgb(11, 11, 45);
+    width: 100%;
+    height: 6.25rem;
+    border-bottom: 2px solid #54E9BC;
+    position: fixed;
+    z-index: 2;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    /* grid-area: header; */
+}
+
+nav {
+    width: 100%;
+    padding: 0rem;
+    /* background: red; */
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    z-index: 2;
+    overflow: hidden;
+}
+
+
+main {
+    padding: 1rem;
+    /* transform: translate(0, 200px); */
+    /* grid-area: main; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+footer {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+/* NAVIGATION */
+
+.nav__background {
+    background-image: url(../img/photos/04-night.jpg);
+    background-repeat: no-repeat;
+    background-size: clamp(150px, 100%, 1000px);
+    /* background-size: cover; */
+    background-position-y: -10px;
+    background-position-x: center;
+    width: 100%;
+    height: 20%;
+    opacity: 0.3;
+    z-index: 2;
+    position: fixed;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.nav__background--about {
+    background-image: url(../img/photos/04-night.jpg);
+    background-repeat: no-repeat;
+    background-size: clamp(150px, 100%, 1000px);
+    /* background-size: cover; */
+    background-position-y: -10px;
+    background-position-x: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -2;
+    position: relative;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+
+
+nav ul {
+    transform: translate(-100%, 0);
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    /* background: #08071F; */
+    /* background: rgb(11, 11, 45 / 1); */
+
+    z-index: 3;
+    position: fixed;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+
+}
+li {
+    margin: 0;
+}
+
+.checkbox {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    right: 1.5rem;
+    top: 1.5rem;
+    opacity: 0;
+    z-index: 5;
+}
+.checkbox:checked ~ ul {
+    /* transform: translate(0, 100px); */
+    /* padding-top: 30px; */
+    transform: none;
+    /* opacity: 1; */
+
+}
+
+.checkbox:hover {
+    cursor: pointer;
+}
+.hamburger-icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 1.5rem;
+    top: 1.5rem;
+    /* background: red; */
+    color: #54E9BC;
+}
+hr {
+    border: 2px solid #54E9BC;
+    border-radius: 50px;
+}
+
+  
+  
+
+/* TEXT */
+
+nav a {
+    color: #54E9BC;
+    min-width: 100%;
+    max-height: 3.5rem;
+    text-decoration: none;
+    padding: 0.7rem;
+    font-size: 1.6rem;
+    z-index: 2;
+    background: rgb(0 0 0 / 0.4);
+    display: block;
+    margin: 0;
+}
+
+nav a:hover {
+    /* text-decoration: underline; */
+    color: #fff;
+    
+} 
+nav a:active {
+    color: #fff;
+} 
+.a--current {
+    color: #fff;
+}
+.a--current:hover {
+    cursor: default;
+}
+
+
+h1 {
+    color: #54E9BC;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 12%;
+    cursor: default;
+}
+
+
+
+p {
+    color: rgb(226, 225, 225);
+    line-height: 1.5rem;
+    background: rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    max-width: 35rem;;
+}
+
+
+
+h2, h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.search-result__info h3 {
+    text-align: left;
+    color: black;
+}
+.search-result__info p {
+    color: black;
+
+}
+
+/* SECTIONS */
+
+.about__included {
+    border: solid 2px #54E9BC;
+    background: rgb(0 0 0 / 0.2);
+    width: 100%;
+    max-width: 35rem;;
+}
+
+.about__included li {
+    color: white;
+    width: 100%;
+    margin: 0.2rem 0;
+}
+
+.about__gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.search__form {
+    min-width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    border-bottom: 2px solid white;
+    margin-bottom: 2rem;
+}
+
+.search-results {
+    min-width: 100%;
+    min-height: 80%;
+    /* border: 1px solid red; */
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* background: red; */
+    width: 100%;
+    height: 80%;
+}
+
+.search-result {
+    width: 100%;
+    max-width: 400px;
+    min-height: 14rem;
+    background: white;
+    display: flex;
+    flex-flow: column nowrap;
+    /* background: yellow; */
+}
+
+.search-result__images {
+    min-height: 34%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.search-result__info {
+    height: 66%;
+    width: 100%;
+    padding: 1rem;
+
+}
+
+/* FORM */
+
+
+form label {
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+input[type="date"] {
+    font-family: Inter;
+    border: none;
+}
+
+form input, form select {
+    height: 2rem;
+    margin-top: 0.3rem;
+    padding: 0.3rem;
+    font-size: 1rem;;
+
+}
+
+.search-button {
+    font-family: Inter, sans-serif;
+    background: #54E9BC;
+    color: white;
+    font-size: 1.8rem;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    padding: 0.7rem 0.1rem;;
+    margin: 1.3rem 0;
+    min-width: 95%;
+}
+.search-button:hover {
+    cursor: pointer;
+    color: #54E9BC;
+    background: white;
+}
+
+
+/* IMAGES */
+
+.main__logo {
+    width: 50%;
+    min-width: 15rem;
+    max-width: 18rem;
+    
+}
+
+.about__photo {
+    width: 100%;
+    height: auto;
+}
+
+.about__photo-container {
+    min-width: 15rem;
+    max-width: 400px;
+    height: auto;
+    border: solid 2px rgb(6, 6, 25);
+
+}
+
+.search-result__images img {
+    max-width: 100%;
+    height: auto;
+}
