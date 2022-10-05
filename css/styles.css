@@ -8,35 +8,44 @@ body {
     height: 100vh;
     background: rgb(11, 11, 45);
     font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
-    max-width: 1000px;
     min-height: 100%;
     /* background: red; */
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 6.25rem 10rem 1fr 3.25rem;
     position: relative;
+    width: 100%;
+    max-width: 1000px;
 }
 
 /* BLOCKS */
 
 header {
-    background-image: url(../img/logo/bonz.ai-logo-color-landscape.png);
+    /* background-image: url(../img/photos/04-night.jpg);
     background-repeat: no-repeat;
-    background-size: clamp(150px, 50%, 200px);
-    background-position: 0.8rem 1.6rem;
-    background-color: rgb(11, 11, 45);
+    background-size: cover;
+    background-position: 0rem -2.5rem;*/
+    background-color: rgb(11, 11, 45); 
     width: 100%;
-    height: 6.25rem;
+    min-height: 6.25rem;
     border-bottom: 2px solid #54E9BC;
     position: fixed;
     z-index: 2;
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
+    display: flex;
+    align-items: center;
+    /* padding: 1.6rem 0.8rem; */
     /* grid-area: header; */
+    /* overflow: hidden; */
 }
+
+
 
 nav {
     width: 100%;
@@ -51,6 +60,7 @@ nav {
 
 main {
     padding: 1rem;
+    /* padding-top: 6.5rem;; */
     /* transform: translate(0, 200px); */
     /* grid-area: main; */
     display: flex;
@@ -61,6 +71,9 @@ main {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
 }
+.main--about-us, .main--search {
+    margin-top: -5rem;
+}
 
 footer {
     grid-column: 1 / span 1;
@@ -69,11 +82,11 @@ footer {
 
 /* NAVIGATION */
 
-.nav__background {
+/* .nav__background {
     background-image: url(../img/photos/04-night.jpg);
     background-repeat: no-repeat;
     background-size: clamp(150px, 100%, 1000px);
-    /* background-size: cover; */
+    background-size: cover;
     background-position-y: -10px;
     background-position-x: center;
     width: 100%;
@@ -83,22 +96,24 @@ footer {
     position: fixed;
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
-}
+} */
 
-.nav__background--about {
+.header__background {
     background-image: url(../img/photos/04-night.jpg);
     background-repeat: no-repeat;
-    background-size: clamp(150px, 100%, 1000px);
-    /* background-size: cover; */
-    background-position-y: -10px;
+    background-size: 100%;
+    /* background-size: contain; */
+    background-position-y: -40px;
     background-position-x: center;
     width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    z-index: -2;
-    position: relative;
+    height: 6.25rem;
+    opacity: 0.2;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
     grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
+    grid-row: 1 / span 1;
+
 }
 
 
@@ -113,7 +128,7 @@ nav ul {
     flex-flow: column nowrap;
     justify-content: space-evenly;
     /* background: #08071F; */
-    /* background: rgb(11, 11, 45 / 1); */
+    background: rgb(11, 11, 45);
 
     z-index: 3;
     position: fixed;
@@ -199,6 +214,7 @@ h1 {
     color: #fff;
     text-align: center;
     font-weight: 400;
+    font-size: 2rem;
     letter-spacing: 12%;
     cursor: default;
 }
@@ -259,12 +275,19 @@ h2, h3 {
     background: rgb(0 0 0 / 0.2);
     width: 100%;
     max-width: 35rem;;
+    box-shadow: 4px 4px 20px rgb(0 0 0 / 0.6);
 }
 
 .about__included li {
     color: white;
     width: 100%;
     margin: 0.2rem 0;
+}
+
+.about__info {
+    /* min-width: 375px; */
+    max-width: 450px;
+    /* margin-right: 1rem; */
 }
 
 .about__gallery {
@@ -275,7 +298,7 @@ h2, h3 {
 }
 
 .search__form {
-    min-width: 350px;
+    min-width: 320px;
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
@@ -301,7 +324,7 @@ h2, h3 {
     flex-flow: row wrap;
     justify-content: center;
     /* align-items: space-evenly; */
-    gap: 2.5rem 1rem;
+    gap: 4.5rem 1rem;
     position: relative;
 }
 /* .search-results > ul > li {
@@ -313,11 +336,13 @@ h2, h3 {
 
 .search-result {
     width: 100%;
-    max-width: 350px;
+    max-width: 320px;
+    min-width: 320px;
     height: 100%;
     background: white;
     display: flex;
     flex-flow: column nowrap;
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 0.6);
     /* background: yellow; */
 }
 
@@ -330,6 +355,10 @@ h2, h3 {
     position: relative;
     overflow: hidden;
 
+}
+.search-result__images img:nth-child(1) {
+    height: 120%;
+    transform: translateY(-1.5rem);
 }
 
 .search-result__info {
@@ -434,6 +463,7 @@ form label {
 input[type="date"] {
     font-family: Inter;
     border: none;
+    max-width: 8rem;
 }
 
 form input, form select {
@@ -441,8 +471,15 @@ form input, form select {
     margin-top: 0.3rem;
     padding: 0.3rem;
     font-size: 1rem;;
+    
+
 
 }
+form select {
+    /* background: green; */
+    font-size: 1.1rem; 
+}
+
 
 .search-button {
     font-family: Inter, sans-serif;
@@ -466,6 +503,11 @@ form input, form select {
 
 /* IMAGES */
 
+.header__logo {
+    width: clamp(150px, 50%, 200px);
+    padding:0 0 0 0.8rem ;
+}
+
 .main__logo {
     width: 50%;
     min-width: 15rem;
@@ -473,20 +515,159 @@ form input, form select {
     
 }
 
+
 .about__photo {
     width: 100%;
     height: auto;
+    box-shadow: 2px 2px 20px rgb(0 0 0 / 0.6);
 }
 
 .about__photo-container {
     min-width: 15rem;
     max-width: 400px;
     height: auto;
-    border: solid 2px rgb(6, 6, 25);
 
 }
 
 .search-result__images img {
     max-width: 100%;
     height: auto;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .wrapper {
+        min-height: 100%;
+        /* background: red; */
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 9.25rem 3rem 1fr 3.25rem;
+        position: relative;
+        }
+        
+    header {
+        min-height: 9.25rem;
+        position: unset;
+    }
+
+    .header__logo {
+        width: clamp(9.375rem, 50%, 15.625rem);
+        padding:0 0 0 0.8rem ;
+    }
+    .header__background {
+        background-position-y: -11.5rem;
+        height: 9.25rem;
+    }
+    .hamburger-icon {
+        display: none;
+    }
+    .checkbox {
+        display: none;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    nav > ul {
+        transform: none;
+        flex-flow: row nowrap;
+        max-width: 800px;
+        position: absolute;
+
+    }
+    nav a {
+        font-size: 1.1rem;
+
+    }
+
+    main {
+        justify-content: center;
+    }
+    .main--about-us, .main--search {
+        margin-top: 0;
+    }
+
+    .main--about-us {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+        /* padding: 0 50px; */
+    }
+
+    .about__photo-container {
+        width: 100%;
+        max-width: 48%;
+    }
+
+    .about__gallery {
+        max-width:1000px;
+        /* align-self: center; */
+    }
+
+    .about__info {
+        min-width: 375px;
+        max-width: 400px;
+        margin-right: 1rem;
+    }
+
+    .main--search {
+
+    }
+
+    .search-results > ul {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .search-result {
+        width: 100%;
+        max-width: 320px;
+        min-width: 920px;
+        min-height: 330px;
+        height: 100%;
+        background: white;
+        display: flex;
+        flex-flow: row nowrap;
+        /* background: yellow; */
+    }
+    
+    .search-result__images {
+        min-height: 100%;
+        min-width: 60%;
+        /* display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around; */
+        position: relative;
+        overflow: hidden;
+    
+    }
+    .search-result__images img:nth-child(1) {
+        height: 100%;
+        min-width: 125%;
+        transform: translateX(-4.5rem);
+    }
+    
+    .search-result__info {
+        min-height: 66%;
+        width: 100%;
+        padding: 1rem;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    .search-result__features {
+        /* min-height: 10rem; */
+        max-height: 8rem;
+        font-size: 0.8rem;
+        background: rgb(11 11 45 / 0.2);
+        border-radius: 5px;
+        padding: 0.2rem;
+        gap: 0.1rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        list-style: none;
+    }
 }
