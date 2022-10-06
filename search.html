@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <img src="img/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai logo" class="header__logo">
+            <a href="index.html"><img src="img/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai logo" class="header__logo"></a>
             <div class="header__background">
                 
             </div>
@@ -45,14 +45,13 @@
                 <label for="start">
                     Check-in date
                     <input type="date" id="start" name="trip-start"
-                    value="2022-10-01"
+                    
                     min="2022-10-01" max="2023-12-31">
                 </label>
                 
                 <label for="end">
                     Check-out date
                     <input type="date" id="end" name="trip-end"
-                    value="2022-10-02"
                     min="2022-10-02" max="2023-12-31">
                 </label>
                 <label for="guests">
@@ -100,9 +99,13 @@
                                     <button class="search-result__btn search-result__btn--share">Share</button>
                                     <button class="search-result__btn">Book now!</button>
                                 </section>
-                            </section>
-                        
-                    </article></li>
+                            </section>    
+                    </article>
+                    <hr class="search-results__divider"> 
+                </li>
+                    
+                    
+
                     <li><article class="search-result">
                         <section class="search-result__images">
                             <img src="img/photos/09-night.jpg" alt="Room night">
@@ -136,8 +139,10 @@
                                 <button class="search-result__btn">Book now!</button>
                             </section>
                         </section>
-                    
-                    </article></li>
+                    </article>
+                    <hr class="search-results__divider">  
+                
+                </li>
                     <li><article class="search-result">
                         <section class="search-result__images">
                             <img src="img/photos/08-night.jpg" alt="Room night">
@@ -169,8 +174,10 @@
                                 <button class="search-result__btn">Book now!</button>
                             </section>
                         </section>
-                    
-                    </article></li>
+                    </article>
+                    <hr class="search-results__divider">  
+
+                </li>
                     <li><article class="search-result">
                         <section class="search-result__images">
                             <img src="img/photos/05-day.jpg" alt="Room night">
@@ -202,8 +209,10 @@
                                 <button class="search-result__btn">Book now!</button>
                             </section>
                         </section>
-                    
-                    </article></li>
+                    </article>
+                    <hr class="search-results__divider">  
+
+                </li>
                     <li><article class="search-result">
                         <section class="search-result__images">
                             <img src="img/photos/04-night.jpg" alt="Room night">
@@ -236,8 +245,10 @@
                                 <button class="search-result__btn">Book now!</button>
                             </section>
                         </section>
-                    
-                    </article></li>
+                    </article>
+                    <hr class="search-results__divider">  
+
+                </li>
                     <li><article class="search-result">
                         <section class="search-result__images">
                             <img src="img/photos/05-night.jpg" alt="Room night">
@@ -273,12 +284,26 @@
                             </section>
                         </section>
                     
-                    </article></li>
+                    </article>
+                    <hr class="search-results__divider">  
+
+                </li>
                 </ul>
             </section>
         </main>
         <footer>
-
+            <section class="footer__location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="footer__p">1234 N La Brea Ave<br> Los Angeles, CA 90028, USA</p>
+            </section>
+            <section class="footer__socials">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </section>
         </footer>
     </div>
 </body>
