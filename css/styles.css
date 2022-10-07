@@ -60,7 +60,7 @@ header {
 
 nav {
     width: 100%;
-    padding: 0rem;
+    padding: 0;
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     z-index: 2;
@@ -95,7 +95,7 @@ footer {
     background-image: url(../img/photos/04-night.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position-y: -40px;
+    background-position-y: -2.5rem;
     background-position-x: center;
     width: 100%;
     height: 6.25rem;
@@ -219,7 +219,7 @@ hr {
 }
 
 .about__info {
-    max-width: 450px;
+    max-width: 28.125rem;
 }
 
 .about__gallery {
@@ -230,7 +230,7 @@ hr {
 }
 
 .search__form {
-    min-width: 320px;
+    min-width: 20rem;
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
@@ -257,7 +257,7 @@ hr {
 }
 
 .search-results > ul li {
-    max-height: 570px;
+    max-height: 35.625rem;
 }
 
 .search-results__divider {
@@ -277,8 +277,8 @@ hr {
 
 .search-result {
     width: 100%;
-    max-width: 320px;
-    min-width: 320px;
+    max-width: 20rem;
+    min-width: 20rem;
     height: 100%;
     background: rgb(240, 240, 240);
     display: flex;
@@ -496,7 +496,7 @@ p {
     line-height: 1.5rem;
     background: rgb(0 0 0 / 0.2);
     padding: 1rem;
-    max-width: 35rem;;
+    max-width: 35rem;
 }
 
 .footer__p {
@@ -572,7 +572,7 @@ h2, h3 {
 
 .about__photo-container {
     min-width: 15rem;
-    max-width: 400px;
+    max-width: 25rem;
     height: auto;
 }
 
@@ -634,7 +634,7 @@ h2, h3 {
     nav > ul {
         transform: none;
         flex-flow: row nowrap;
-        max-width: 800px;
+        max-width: 50rem;
         position: absolute;
     }
 
@@ -669,8 +669,8 @@ h2, h3 {
     }
 
     .about__info {
-        min-width: 375px;
-        max-width: 400px;
+        min-width: 23.4375rem;
+        max-width: 25rem;
         margin-right: 1rem;
     }
 
@@ -681,9 +681,9 @@ h2, h3 {
 
     .search-result {
         width: 100%;
-        max-width: 320px;
-        min-width: 920px;
-        max-height: 385px;
+        max-width: 20rem;
+        min-width: 57.5rem;
+        max-height: 24.0625rem;
         height: 100%;
         background: white;
         display: flex;
