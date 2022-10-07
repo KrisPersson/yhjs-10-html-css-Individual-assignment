@@ -312,7 +312,7 @@ hr {
     flex-flow: column nowrap;
     justify-content: space-between;
     border: 1px solid rgb(11, 11, 45);
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
 }
 
 .search-result__features {
