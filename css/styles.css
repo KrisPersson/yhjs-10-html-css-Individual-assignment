@@ -422,6 +422,7 @@ form input, form select {
     font-size: 1rem;;
     background: rgb(240, 240, 240);
     border-radius: 2px;
+    color: black;
 }
 form select {
     font-size: 0.9rem; 
